@@ -1,0 +1,136 @@
+/**
+ * @name Interstellar
+ * @description Interstellar Movie themes
+ * @author Drosimoc
+ * @version 9.0
+ * @source https://github.com/refact0r/midnight-discord
+ * @authorId 875400268202786886
+*/
+
+/* Tema için ön hazırlık */
+@import url("https://xcruxiex.github.io/themes/themes-cores/neutron8.css");
+@import url("https://xcruxiex.github.io/themes/core/badges.css");
+@import url("https://xcruxiex.github.io/themes/core/custom-font.css");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
+@import url(https://schnensch0.github.io/zelk/main.css);
+@import url(https://discord-custom-covers.github.io/usrbg/dist/usrbg.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/addons/material-you/source.css);
+
+/* Arka planı kaldır ve yeni arka plan resmini ekle */
+:root {
+    --background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDRsMmpua2gzZGFraDYzZW1yY2hhc2NybjVsaTU0YnFwYTQ4eXFwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q8JEIbgrSIpqFm6fem/giphy.gif");
+    --background-blur: 2px;
+    --glow-intensity: 10;
+}     
+
+body::before {                                                                    
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 2px white;
+    background-image: var(--background-image);
+    background-size: cover;
+    filter: blur(var(--background-blur));
+    opacity: var(--opacity);
+}
+
+/* Temanın geri kalanı */
+:root {
+    /* Renkler ve Tema Ayarları */
+    --corner-text: 'Midnight';
+    --online-indicator: #1DB954; /* Spotify yeşili rengi */
+    --dnd-indicator: #f13f43; /* Varsayılan kırmızı */
+    --idle-indicator: #f0b232; /* Varsayılan sarı */
+    --accent-2: #949cf7; /* Spotify yeşili renk */
+    --accent-3: #6e7aff; /* Vurgulu düğmeler */
+    --text-1: #ffffff; /* Başlıklar ve önemli metin */
+    --text-2: #ffffff; /* Başlıklar ve önemli metin */
+    --text-3: #ffffff; /* Normal metin */
+    --text-4: #8e8e8e; /* Simgeler ve kanallar */
+    --text-5: #bababa; /* Sessiz kanallar, sohbetler ve zaman damgaları */
+    --text-unread: orange; /* Okunmamış kanalların yazı rengi */
+    --text-read: lime; /* Okunmuş kanalların yazı rengi */
+    --bg-1: rgba(32, 34, 37, 0.5); /* Tıklandığında koyu düğmeler - saydam gri */
+    --bg-2: rgba(32, 34, 37, 0.5); /* Koyu düğmeler */
+    --bg-3: rgba(32, 34, 37, 0.5); /* Boşluklar, ikincil öğeler */
+    --bg-4: rgba(32, 34, 37, 0.5); /* Ana siyah renk */
+    --hover: #292b2f;
+    --active: #3e4147;
+    --message-hover: rgba(79,84,92,0.1); /* Mesajların üzerine gelindiğinde */
+    --spacing: 12px; /* Boşluk ve dolgu miktarı */
+    --roundness-xl: 22px; /* Büyük panel dış köşelerin yuvarlanma miktarı */
+    --roundness-l: 20px; /* Popout paneller */
+    --roundness-m: 16px; /* Daha küçük paneller, resimler, gömme öğeleri */
+    --roundness-s: 12px; /* Üyeler, ayarlar girişleri */
+    --roundness-xs: 10px; /* Kanallar, düğmeler */
+    --roundness-xxs: 8px; /* Arama çubuğu, küçük öğeler */
+    --login-bg-filter: none; /* Giriş arkaplan sanatı */
+    --green-to-accent-3-filter: none; /* Arkadaş ekle sayfa keşfet simgesi */
+    --blurple-to-accent-3-filter: none; /* Arkadaş ekle sayfa okul simgesi */
+    --themeColor1: #36D1DC; /* Tema rengi 1 */
+    --themeColor2: #5B86E5; /* Tema rengi 2 */
+    --customFont: 'Comfortaa', sans-serif; /* Özel font */
+    --backgroundImage: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDRsMmpua2gzZGFraDYzZW1yY2hhc2NybjVsaTU0YnFwYTQ4eXFwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q8JEIbgrSIpqFm6fem/giphy.gif'); /* Arkaplan resmi */
+    --backgroundPosition: center; /* Resim konumu */
+    --backgroundSize: cover; /* Resim boyutu */
+    --backgroundRepeat: no-repeat; /* Resmin tekrarı */
+    --backgroundBlur: 2px; /* Bulanıklık miktarı */
+    --backgroundOpacity: 0.2; /* Arka plan opaklığı */
+    --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+    --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+    --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+  
+    --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+    --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+    --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+  
+    --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+  
+    --rs-online-color: #43b581; /* Colour for online status */
+    --rs-idle-color: #faa61a; /* Colour for idle status */
+    --rs-dnd-color: #f04747; /* Colour for dnd status */
+    --rs-offline-color: #636b75; /* Colour for offline status */
+    --rs-streaming-color: #643da7; /* Colour for streaming status */
+    --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+    --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+  
+    --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+}
+
+/* Ana menüde bazı kısımların arkaplanı */
+.theme-dark .scrollerWrap-2lJEkd, /* Ana menü */
+.theme-dark .footer-3MQ1b2, /* Alt kısım */
+.theme-dark .actionButtons-1TuCmh { /* Eylem düğmeleri */
+    background-color: var(--bg-1);
+    border-radius: var(--roundness-xs);
+    backdrop-filter: blur(10px); /* Arkaplan bulanıklığı */
+    border: 2px white;
+}
+
+/* Buton stillemesi */
+button {
+    border-radius: var(--roundness-xs);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+    border: 2px white;
+}
+
+/* Buton hover efekti */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0.6;
+    border: 2px white;
+}
+
+
+
